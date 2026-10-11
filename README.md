@@ -9,6 +9,18 @@ The owner approved the existing organization `ahuzatmenashe` instead of the
 originally proposed `ahuzatmenashecard`. The original personal repository is
 preserved at https://github.com/bar987789-oss/ahuzat-menashe-card.
 
+The production pass has been signed locally with the owner's existing Apple
+certificate and matching private key. Download it at
+**https://ahuzatmenashe.github.io/Ahuzat-Menashe.pkpass**. Its certificate-derived
+Team ID is `CABL4XGRQ7`; the Pass Type ID is
+`pass.com.ahuzatmenashe.businesscard`. The detached signature, certificate chain,
+embedded WWDR G4, manifest hashes, allowed archive files and final live QR URL
+have passed verification. See `wallet/production.validation.json` for the
+public validation result. Actual iPhone installation remains to be confirmed.
+
+The private key is stored outside this checkout at
+`C:\Users\bar98\Ahuzat-Wallet-Private\private.key` and is never published.
+
 ## Wallet source
 
 `wallet/pass.template.json` is source, not an installable pass. It deliberately
@@ -80,7 +92,29 @@ python3 /root/wallet/Ahuzat-Wallet-Kit/wallet/build_pass.py \
   --validate /mnt/walletshare/Downloads/Ahuzat-Menashe.pkpass
 ```
 
+## Build locally on Windows
+
+With Python 3.9+ and OpenSSL on PATH, run from this repository:
+
+```powershell
+python wallet/build_pass.py --cert .\pass.cer --key ..\Ahuzat-Wallet-Private\private.key --output .\Ahuzat-Menashe.pkpass
+```
+
+If OpenSSL is supplied by Git for Windows, set its location before running:
+
+```powershell
+$env:OPENSSL = 'C:\Program Files\Git\usr\bin\openssl.exe'
+```
+
+The certificate remains an ignored local file. The private key must remain
+outside the source checkout. The same live-site, identity and signature checks
+apply on Windows and iSH.
+
 ## Add to Apple Wallet on an iPhone
+
+Open **https://ahuzatmenashe.github.io/Ahuzat-Menashe.pkpass** in Safari on the
+iPhone and tap **Add** when the pass preview appears. If Safari downloads the
+file instead, open it from Files on the iPhone.
 
 In the iPad Files app, open the mounted Downloads folder and share
 `Ahuzat-Menashe.pkpass` to the iPhone with AirDrop, or save it in iCloud Drive
@@ -90,10 +124,11 @@ device and confirm it opens https://ahuzatmenashe.github.io/.
 
 iPad does not provide the iPhone Wallet installation flow. A successful build
 does not prove installation: record actual iPhone confirmation before declaring
-completion. No production `.pkpass` exists until the owner runs the local build.
+completion. The signed production file is available; device acceptance has not
+yet been confirmed.
 
-For a public website download button, publish only the verified signed pass
-after device testing, then check the serving response and iPhone download flow.
+For a public website download button, first confirm the actual iPhone download
+and installation flow for the signed pass, then add the button to the website.
 The public kit is a source download, not an Add to Wallet link.
 
 ## Reproduce checks and package

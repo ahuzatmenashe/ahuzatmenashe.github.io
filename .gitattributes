@@ -2,6 +2,7 @@
 index.html -text
 *.png binary
 *.zip binary
+*.pkpass binary
 *.sh text eol=lf
 *.py text eol=lf
 *.json text eol=lf
