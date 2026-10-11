@@ -1,0 +1,31 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.com.ahuzatmenashe.businesscard",
+  "serialNumber": "ahuzat-menashe-businesscard-v1",
+  "organizationName": "Ahuzat Menashe",
+  "description": "כרטיס ביקור — אחוזת מנשה, וילת אירוח יוקרתית",
+  "backgroundColor": "rgb(22, 18, 15)",
+  "foregroundColor": "rgb(239, 230, 216)",
+  "labelColor": "rgb(201, 164, 106)",
+  "sharingProhibited": false,
+  "barcodes": [{
+    "format": "PKBarcodeFormatQR",
+    "message": "https://ahuzatmenashe.github.io/",
+    "messageEncoding": "iso-8859-1"
+  }],
+  "generic": {
+    "primaryFields": [{"key": "villa", "label": "וילת אירוח יוקרתית", "value": "אחוזת מנשה", "textAlignment": "PKTextAlignmentRight"}],
+    "secondaryFields": [{"key": "location", "label": "מיקום", "value": "מושב עלמה", "textAlignment": "PKTextAlignmentRight"}],
+    "auxiliaryFields": [{"key": "phone", "label": "להזמנות ופרטים", "value": "052-333-8028", "textAlignment": "PKTextAlignmentRight"}],
+    "backFields": [
+      {"key": "about", "label": "Ahuzat Menashe", "value": "וילת אירוח יוקרתית במושב עלמה. חווית אירוח בסטנדרט אחר."},
+      {"key": "contact", "label": "יצירת קשר עם אחוזת מנשה", "value": "+972-52-333-8028"},
+      {"key": "website", "label": "כרטיס הביקור והגלריה", "value": "https://ahuzatmenashe.github.io/"},
+      {"key": "whatsapp", "label": "WhatsApp", "value": "https://wa.me/972523338028"},
+      {"key": "waze", "label": "ניווט למושב עלמה", "value": "https://waze.com/ul?q=%D7%9E%D7%95%D7%A9%D7%91%20%D7%A2%D7%9C%D7%9E%D7%94&navigate=yes"},
+      {"key": "instagram", "label": "Instagram", "value": "https://www.instagram.com/ahuzatmenashe"},
+      {"key": "tiktok", "label": "TikTok", "value": "https://www.tiktok.com/@ahuzatmenashe"},
+      {"key": "facebook", "label": "Facebook", "value": "https://www.facebook.com/share/19gNbbSRgN/?mibextid=wwXIfr"}
+    ]
+  }
+}

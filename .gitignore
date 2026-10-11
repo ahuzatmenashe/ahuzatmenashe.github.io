@@ -1,0 +1,17 @@
+# Signing credentials must never enter this repository.
+*.key
+*.pem
+*.p12
+*.pfx
+*.csr
+*.cer
+*.der
+.env*
+!*.example
+__pycache__/
+*.pyc
+qa/
+dist/
+wallet/build/
+*.pkpass
+Ahuzat-Wallet-Kit.zip

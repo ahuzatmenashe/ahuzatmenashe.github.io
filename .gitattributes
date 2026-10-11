@@ -1,0 +1,7 @@
+# Preserve embedded-image HTML byte-for-byte for the final URL check.
+index.html -text
+*.png binary
+*.zip binary
+*.sh text eol=lf
+*.py text eol=lf
+*.json text eol=lf
