@@ -21,6 +21,40 @@ public validation result. Actual iPhone installation remains to be confirmed.
 The private key is stored outside this checkout at
 `C:\Users\bar98\Ahuzat-Wallet-Private\private.key` and is never published.
 
+## Editing the website
+
+Management entry: **https://ahuzatmenashe.github.io/admin/**.
+The Hebrew editor is provided by [Pages CMS](https://app.pagescms.org/).
+Website text and links come from `content/site.json`; images and short videos
+are stored under `media/`. `.pages.yml` defines the editor fields and uploads.
+The original photos have been extracted without recompression.
+
+One-time owner setup:
+
+1. Sign in to Pages CMS with the owner's GitHub account.
+2. Install its GitHub App for `ahuzatmenashe/ahuzatmenashe.github.io` only.
+3. Open that repository and invite the friend's email under collaborators.
+4. The friend signs in with their own email and edits “פרטי האתר והגלריה”.
+
+Collaborators can edit this repository's configured content and media without
+access to the owner's GitHub account or the Wallet signing key. Save in the
+editor, wait for GitHub Pages to publish, then refresh the public website.
+App installation and collaborator access must be completed before the editor
+can save. The `/admin/` page alone does not grant access.
+
+The editor supports phone, WhatsApp, navigation and social links, brand text,
+the main image, gallery ordering/captions, short video files and YouTube/Vimeo
+links. Supply complete HTTPS URLs. For long videos use an external video link.
+Videos never autoplay. Changes appear when visitors load or refresh the site.
+
+The Wallet QR opens this updated website. The downloaded or installed Wallet
+pass is separately signed and retains its existing printed details and photo.
+To change those, update `wallet/pass.template.json`/assets and sign a new pass
+locally. No automatic Wallet update service is configured.
+
+References: [Quick start](https://pagescms.org/docs/quick-start/),
+[Collaborators](https://pagescms.org/docs/configuration/collaborators/).
+
 ## Wallet source
 
 `wallet/pass.template.json` is source, not an installable pass. It deliberately
@@ -136,6 +170,13 @@ The public kit is a source download, not an Add to Wallet link.
 ```sh
 python3 tools/test_wallet.py
 python3 tools/pack_wallet_kit.py
+```
+
+For the website integration checks (test dependencies stay in ignored `qa/`):
+
+```sh
+npm install --prefix qa/content-deps --no-save jsdom yaml
+node --test tools/test_content.mjs
 ```
 
 The signing test generates disposable synthetic certificates in the operating

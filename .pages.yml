@@ -1,0 +1,126 @@
+media:
+  - name: images
+    label: תמונות
+    input: media/images
+    output: /media/images
+    extensions: [jpg, jpeg, png, webp]
+    rename: random
+  - name: videos
+    label: סרטונים
+    input: media/videos
+    output: /media/videos
+    extensions: [mp4, m4v, webm]
+    rename: random
+content:
+  - name: site
+    label: פרטי האתר והגלריה
+    type: file
+    path: content/site.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: brand
+        label: שם העסק והטקסטים
+        type: object
+        fields:
+          - name: englishName
+            label: שם העסק באנגלית
+            type: string
+            required: true
+          - name: hebrewName
+            label: שם העסק בעברית
+            type: string
+            required: true
+          - name: category
+            label: שורת הכותרת הקטנה
+            type: string
+          - name: tagline
+            label: משפט פתיחה
+            type: text
+      - name: contact
+        label: יצירת קשר וקישורים
+        type: object
+        fields:
+          - name: phone
+            label: מספר טלפון
+            description: אפשר להזין מספר ישראלי רגיל או מספר בינלאומי עם קידומת.
+            type: string
+            required: true
+          - name: whatsapp
+            label: מספר WhatsApp אם הוא שונה מהטלפון
+            description: השאר ריק כדי להשתמש במספר הטלפון.
+            type: string
+          - name: location
+            label: כתובת או שם המקום
+            type: string
+            required: true
+          - name: navigationUrl
+            label: קישור ניווט מלא
+            type: string
+          - name: instagram
+            label: קישור Instagram מלא
+            type: string
+          - name: tiktok
+            label: קישור TikTok מלא
+            type: string
+          - name: facebook
+            label: קישור Facebook מלא
+            type: string
+      - name: hero
+        label: התמונה הראשית
+        type: object
+        fields:
+          - name: image
+            label: בחירה או העלאת תמונה ראשית
+            type: image
+            required: true
+            options:
+              media: images
+          - name: alt
+            label: תיאור התמונה לנגישות
+            type: string
+      - name: galleryTitle
+        label: כותרת הגלריה
+        type: string
+      - name: gallery
+        label: תמונות הגלריה
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: תמונה
+            type: image
+            required: true
+            options:
+              media: images
+          - name: caption
+            label: כיתוב מתחת לתמונה
+            type: string
+          - name: alt
+            label: תיאור התמונה לנגישות
+            type: string
+      - name: videos
+        label: סרטונים
+        description: בחר קובץ קצר או קישור לסרטון. לסרטונים גדולים עדיף קישור YouTube או Vimeo. אין הפעלה אוטומטית.
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: כותרת הסרטון
+            type: string
+          - name: file
+            label: העלאת סרטון קצר
+            type: file
+            options:
+              media: videos
+          - name: externalUrl
+            label: קישור לסרטון במקום העלאת קובץ
+            type: string
+          - name: poster
+            label: תמונת תצוגה לסרטון שהועלה
+            type: image
+            options:
+              media: images

@@ -1,0 +1,60 @@
+{
+  "brand": {
+    "englishName": "Ahuzat Menashe",
+    "hebrewName": "אחוזת מנשה",
+    "category": "וילת אירוח",
+    "tagline": "חווית אירוח בסטנדרט אחר."
+  },
+  "contact": {
+    "phone": "052-333-8028",
+    "whatsapp": "",
+    "location": "מושב עלמה",
+    "navigationUrl": "https://waze.com/ul?q=%D7%9E%D7%95%D7%A9%D7%91%20%D7%A2%D7%9C%D7%9E%D7%94&navigate=yes",
+    "instagram": "https://www.instagram.com/ahuzatmenashe",
+    "tiktok": "https://www.tiktok.com/@ahuzatmenashe",
+    "facebook": "https://www.facebook.com/share/19gNbbSRgN/?mibextid=wwXIfr"
+  },
+  "hero": {
+    "image": "/media/images/hero.jpg",
+    "alt": "בריכת האחוזה בשקיעה"
+  },
+  "galleryTitle": "הווילה",
+  "gallery": [
+    {
+      "image": "/media/images/pool.jpg",
+      "caption": "הבריכה",
+      "alt": "הבריכה והחצר"
+    },
+    {
+      "image": "/media/images/pergola.jpg",
+      "caption": "פרגולה וגריל",
+      "alt": "פרגולה, שולחן אוכל וגריל"
+    },
+    {
+      "image": "/media/images/garden.jpg",
+      "caption": "החצר",
+      "alt": "החצר והדשא"
+    },
+    {
+      "image": "/media/images/seating.jpg",
+      "caption": "פינת ישיבה מקורה",
+      "alt": "פינת ישיבה מקורה בחצר"
+    },
+    {
+      "image": "/media/images/bedroom.jpg",
+      "caption": "חדר שינה",
+      "alt": "חדר שינה עם יציאה לבריכה"
+    },
+    {
+      "image": "/media/images/living-room.jpg",
+      "caption": "סלון",
+      "alt": "הסלון"
+    },
+    {
+      "image": "/media/images/kitchen.jpg",
+      "caption": "מטבח",
+      "alt": "המטבח"
+    }
+  ],
+  "videos": []
+}

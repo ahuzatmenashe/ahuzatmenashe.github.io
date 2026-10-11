@@ -6,8 +6,10 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = ["index.html", "README.md", ".gitignore", ".gitattributes", ".nojekyll",
+         ".pages.yml", "content/site.json", "assets/card.mjs", "admin/index.html",
          "wallet/build.sh", "wallet/build_pass.py", "wallet/pass.template.json",
-         "tools/test_wallet.py", "tools/pack_wallet_kit.py"]
+         "tools/test_wallet.py", "tools/test_content.mjs", "tools/pack_wallet_kit.py"]
+FILES += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT / "media/images").glob("*.jpg"))]
 FILES += ["wallet/assets/" + stem + suffix + ".png"
           for stem in ("icon", "logo", "thumbnail") for suffix in ("", "@2x", "@3x")]
 
