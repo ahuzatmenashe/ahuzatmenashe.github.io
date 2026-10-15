@@ -7,7 +7,6 @@
   },
   "contact": {
     "phone": "052-333-8028",
-    "whatsapp": "",
     "location": "מושב עלמה",
     "navigationUrl": "https://waze.com/ul?q=%D7%9E%D7%95%D7%A9%D7%91%20%D7%A2%D7%9C%D7%9E%D7%94&navigate=yes",
     "instagram": "https://www.instagram.com/ahuzatmenashe",
@@ -22,17 +21,17 @@
   "gallery": [
     {
       "image": "/media/images/pool.jpg",
-      "caption": "הבריכה",
+      "caption": "בריכה מחוממת",
       "alt": "הבריכה והחצר"
     },
     {
       "image": "/media/images/pergola.jpg",
-      "caption": "פרגולה וגריל",
+      "caption": "מתחם מקורה עם מטבח חוץ",
       "alt": "פרגולה, שולחן אוכל וגריל"
     },
     {
       "image": "/media/images/garden.jpg",
-      "caption": "החצר",
+      "caption": "חצר ומדשאה ענקית, פינות משחק",
       "alt": "החצר והדשא"
     },
     {
@@ -42,7 +41,7 @@
     },
     {
       "image": "/media/images/bedroom.jpg",
-      "caption": "חדר שינה",
+      "caption": "סוויטה עם יציאה לבריכה",
       "alt": "חדר שינה עם יציאה לבריכה"
     },
     {
@@ -52,9 +51,8 @@
     },
     {
       "image": "/media/images/kitchen.jpg",
-      "caption": "מטבח",
+      "caption": "מטבח מאובזר",
       "alt": "המטבח"
     }
-  ],
-  "videos": []
+  ]
 }
