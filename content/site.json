@@ -30,11 +30,6 @@
       "alt": "פרגולה, שולחן אוכל וגריל"
     },
     {
-      "image": "/media/images/garden.jpg",
-      "caption": "חצר ומדשאה ענקית, פינות משחק",
-      "alt": "החצר והדשא"
-    },
-    {
       "image": "/media/images/seating.jpg",
       "caption": "פינת ישיבה מקורה",
       "alt": "פינת ישיבה מקורה בחצר"
@@ -53,6 +48,12 @@
       "image": "/media/images/kitchen.jpg",
       "caption": "מטבח מאובזר",
       "alt": "המטבח"
-    }
+    },
+    {
+      "image": "/media/images/mw9ibkxx-kv6pfs19.jpeg",
+      "caption": "פינות משחק",
+      "alt": "פינג פונג"
+    },
+    {}
   ]
 }
