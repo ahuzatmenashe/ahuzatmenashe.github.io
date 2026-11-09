@@ -54,6 +54,10 @@
       "caption": "פינות משחק",
       "alt": "פינג פונג"
     },
-    {}
+    {
+      "image": "/media/images/garden.jpg",
+      "caption": "מדשאה ענקית",
+      "alt": "המדשאה"
+    }
   ]
 }
